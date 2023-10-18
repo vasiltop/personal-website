@@ -57,11 +57,11 @@ const projects: Project[] = [
 
 	<Navbar></Navbar>
 
-	<section class="flex flex-col p-8 items-center fade-intro-delay opacity-0">
-		<div class="basis-4/5 flex flex-col justify-center p-24 max-w-5xl">
+	<section class="flex flex-col items-center fade-intro-delay opacity-0">
+		<div class="basis-4/5 flex flex-col justify-center px-24 max-w-5xl py-16">
 			<h1 class="text-6xl">Welcome!</h1>
 
-			<p class="border-gradient my-8">
+			<p class="border-gradient">
 				I am a second year student at the University of Ottawa that has always
 				been interested in technology. I started programming in the 9th grade
 				with game development and moved onto Java and Python where I developed a
@@ -74,7 +74,7 @@ const projects: Project[] = [
 		</div>
 
 		<div class="flex-grow">
-			<h3 class="text-center p-4 text-2xl">Scroll down to view my projects!</h3>
+			<h3 class="text-center text-2xl">Scroll down to view my projects!</h3>
 
 			<div class="w-full flex justify-center">
 				<svg
