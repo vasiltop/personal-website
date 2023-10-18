@@ -1,5 +1,5 @@
 <template>
-	<nav class="fixed h-[5%] w-screen flex p-8 fade-intro z-10">
+	<nav class="fixed h-[5%] w-screen flex p-8 fade-intro-delay z-10 opacity-0">
 		<h1 class="text-xl">Vasil Topalovic</h1>
 
 		<div class="flex ml-auto gap-4">

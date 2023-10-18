@@ -6,7 +6,7 @@ type Project = {
 	website?: string;
 	image: string;
 };
-const projects = [
+const projects: Project[] = [
 	{
 		name: 'Postboard',
 		description:
@@ -49,23 +49,15 @@ const projects = [
 </script>
 
 <template>
-	<!--
 	<div
 		class="fixed bg-black w-screen h-screen intro grid place-items-center z-50"
 	>
-		<svg
-			viewBox="0 0 100 100"
-			xmlns="http://www.w3.org/2000/svg"
-			font-size="1em"
-			class="fill-white w-full h-full fade-intro stroke-white stroke-1"
-		>
-			<text x="21" y="50">Vasil Topalovic</text>
-		</svg>
+		<h2 class="text-white text-3xl fade-intro">Vasil Topalovic</h2>
 	</div>
--->
+
 	<Navbar></Navbar>
 
-	<section class="flex flex-col p-8 items-center fade-intro">
+	<section class="flex flex-col p-8 items-center fade-intro-delay opacity-0">
 		<div class="basis-4/5 flex flex-col justify-center p-24 max-w-5xl">
 			<h1 class="text-6xl">Welcome!</h1>
 

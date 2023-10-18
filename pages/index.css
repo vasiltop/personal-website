@@ -29,6 +29,11 @@
 	animation: fade-intro 3s ease forwards;
 }
 
+.fade-intro-delay {
+	animation: fade-intro 3s ease forwards;
+	animation-delay: 3s;
+}
+
 html,
 body,
 section {
@@ -36,7 +41,8 @@ section {
 }
 
 .background-card,
-section {
+section,
+body {
 	background-size: cover;
 	background-position: center center;
 	background-color: #dfd3c3;
