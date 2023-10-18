@@ -97,8 +97,8 @@ const projects: Project[] = [
 		v-for="project in projects"
 		class="flex flex-col items-center justify-center"
 	>
-		<h1 class="text-6xl p-2">{{ project.name }}</h1>
-		<div class="flex gap-2 p-2">
+		<h1 class="text-6xl p-4">{{ project.name }}</h1>
+		<div class="flex gap-2 p-4">
 			<NuxtLink :to="project.github" target="_blank">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ const projects: Project[] = [
 			</NuxtLink>
 		</div>
 		<div
-			class="w-10/12 h-4/6 flex flex-col rounded-lg overflow-hidden background-card"
+			class="w-4/6 h-4/6 flex flex-col rounded-lg overflow-hidden background-card"
 			:style="'background-image: url(' + project.image + ')'"
 		>
 			<p class="text-[#3c3939] mt-auto bg-[#bbb6b2] bg-opacity-95 p-4">
