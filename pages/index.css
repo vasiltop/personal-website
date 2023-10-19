@@ -34,6 +34,22 @@
 	animation-delay: 2s;
 }
 
+h1 {
+	animation: left-slide 2s linear both;
+	animation-timeline: view();
+	animation-range: 0% 1%;
+}
+
+@keyframes left-slide {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(20%);
+	}
+}
+
 html,
 body,
 section {
@@ -78,4 +94,8 @@ h3 {
 	border-style: solid;
 	border-width: 0 0 0 1px;
 	padding-left: 15px;
+}
+
+svg:hover {
+	@apply fill-neutral-600;
 }
