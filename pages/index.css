@@ -83,3 +83,11 @@ h3 {
 svg:hover {
 	@apply fill-neutral-600;
 }
+
+textarea:focus {
+	outline: none;
+}
+
+textarea {
+	background: none;
+}

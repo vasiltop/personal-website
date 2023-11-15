@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import init, { execute } from '../wasm/ember';
+
 type Project = {
 	name: string;
 	description: string;
@@ -7,6 +9,13 @@ type Project = {
 	image: string;
 };
 const projects: Project[] = [
+	{
+		name: 'Ember',
+		description:
+			'Ember is a simple interpreter programming language that follows the fundamental syntax of many popular programming languages. ',
+		github: 'https://github.com/vasiltop/ember',
+		image: 'ember.jpg',
+	},
 	{
 		name: 'Postboard',
 		description:
@@ -46,6 +55,29 @@ const projects: Project[] = [
 		image: 'raycasting.jpg',
 	},
 ];
+
+onMounted(async () => {
+	await init();
+	ready.value = true;
+});
+
+const code = ref('print! "Write some code here!";');
+
+watch(code, () => {
+	const encoder = new TextEncoder();
+	const bytes = encoder.encode(code.value);
+
+	try {
+		output.value = execute(bytes);
+		error.value = '';
+	} catch (e) {
+		error.value = e as string;
+	}
+});
+
+const output = ref('Write some code here!');
+const error = ref('');
+const ready = ref(false);
 </script>
 
 <template>
@@ -131,13 +163,38 @@ const projects: Project[] = [
 				</svg>
 			</SvgLink>
 		</div>
+
 		<div
+			v-if="project.name !== 'Ember'"
 			class="w-4/6 h-4/6 flex flex-col rounded-lg overflow-hidden background-card"
 			:style="'background-image: url(' + project.image + ')'"
 		>
 			<p class="text-[#3c3939] mt-auto bg-[#bbb6b2] bg-opacity-95 p-4">
 				{{ project.description }}
 			</p>
+		</div>
+
+		<div v-else class="grid grid-cols-2 place-items-center h-4/6">
+			<div
+				class="w-4/6 h-full flex flex-col rounded-lg overflow-hidden background-card"
+				:style="'background-image: url(' + project.image + ')'"
+			>
+				<p class="text-[#3c3939] mt-auto bg-[#bbb6b2] bg-opacity-95 p-4">
+					{{ project.description }}
+				</p>
+			</div>
+
+			<div class="flex flex-col gap-4 w-4/6 h-4/6 overflow-hidden">
+				<h3 class="text-2xl">Try the demo out!</h3>
+				<textarea
+					v-model="code"
+					class="w-full h-full resize-none font-mono border-black border-2 rounded-lg p-4"
+				>
+				</textarea>
+				<h3 class="text-xl">Output:</h3>
+				<p v-if="!error" class="">{{ output }}</p>
+				<p v-else class="text-red-500">{{ error }}</p>
+			</div>
 		</div>
 	</section>
 </template>
