@@ -1,0 +1,14 @@
+{
+  "name": "ember",
+  "version": "0.1.0",
+  "files": [
+    "ember_bg.wasm",
+    "ember.js",
+    "ember.d.ts"
+  ],
+  "module": "ember.js",
+  "types": "ember.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
