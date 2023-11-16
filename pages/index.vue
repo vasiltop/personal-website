@@ -8,11 +8,12 @@ type Project = {
 	website?: string;
 	image: string;
 };
+
 const projects: Project[] = [
 	{
 		name: 'Ember',
 		description:
-			'Ember is a simple interpreter programming language that follows the fundamental syntax of many popular programming languages. ',
+			'Ember is a simple interpreted programming language that follows the fundamental syntax of many popular programming languages. ',
 		github: 'https://github.com/vasiltop/ember',
 		image: 'ember.jpg',
 	},
