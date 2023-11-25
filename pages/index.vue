@@ -18,6 +18,12 @@ const projects: Project[] = [
 		image: 'ember.jpg',
 	},
 	{
+		name: 'Arena',
+		description: 'Online multiplayer battle royale game.',
+		github: 'https://github.com/vasiltop/arena',
+		image: 'arena.png',
+	},
+	{
 		name: 'Postboard',
 		description:
 			"A minimalistic social media website that allows user's to share their messages with others. ",
@@ -34,19 +40,12 @@ const projects: Project[] = [
 		image: 'moonqwake.jpg',
 	},
 	{
-		name: 'Noteboard',
-		description: 'Collaborative and real-time colour-based music tiles. ',
-		github: 'https://github.com/matteopolak/noteboard',
-		website: 'https://noteboard.vasiltopalovic.com/',
-		image: 'noteboard.png',
-	},
-	{
-		name: 'Examination',
+		name: 'Time Tracker',
 		description:
-			'A web application that enables users to create, share, and take quizzes. Users can also explore and take quizzes created by others and track their quiz progress.',
-		github: 'https://github.com/teamy2/examination',
-		website: 'https://examination.healthhunt.xyz/',
-		image: 'examination.jpg',
+			'A web application that handles time submissions for team projects',
+		github: 'https://github.com/vasiltop/time-tracker',
+		website: 'https://timetracker.vasiltopalovic.com/',
+		image: 'time-tracker.jpg',
 	},
 	{
 		name: 'Raycasting Engine',
@@ -96,7 +95,7 @@ const ready = ref(false);
 		>
 			<h1 class="lg:text-6xl md:text-5xl text-3xl">Welcome!</h1>
 			<p
-				class="border-gradient lg:leading-5 md:leading-4 leading-4 min-w-[20em]"
+				class="border-gradient lg:leading-8 md:leading-6 leading-5 min-w-[10em] text-xl"
 			>
 				I am a second year student at the University of Ottawa that has always
 				been interested in technology. I started programming in the 9th grade
