@@ -13,23 +13,24 @@ const projects: Project[] = [
 	{
 		name: 'Ember',
 		description:
-			'Ember is a simple interpreted programming language that follows the fundamental syntax of many popular programming languages. ',
+			'Ember is a simple interpreted programming language that follows the fundamental syntax of many popular languages. ',
 		github: 'https://github.com/vasiltop/ember',
-		image: 'ember.jpg',
+		image: 'ember.png',
 	},
 	{
-		name: 'Arena',
-		description: 'Online multiplayer battle royale game.',
-		github: 'https://github.com/vasiltop/arena',
-		image: 'arena.png',
+		name: 'Straif',
+		description: 'Straif is a fast-paced time trial game inspired by the movement mechanics of the Source Engine games like Counter-Strike: Source.',
+		github: 'https://github.com/vasiltop/straif',
+		website: 'https://munost.itch.io/straif',
+		image: 'straif.png',
 	},
 	{
-		name: 'Postboard',
+		name: 'Miye',
 		description:
-			"A minimalistic social media website that allows user's to share their messages with others. ",
-		github: 'https://github.com/vasiltop/post-board-frontend',
-		website: 'https://postboard.vasiltopalovic.com/',
-		image: 'postboard.jpg',
+			"Miye is a simple, lightweight .obj model renderer.",
+		github: 'https://github.com/vasiltop/miye',
+		website: 'https://crates.io/crates/miye',
+		image: 'miye.png',
 	},
 	{
 		name: 'Moonqwake',
@@ -37,22 +38,22 @@ const projects: Project[] = [
 			'A 3-dimensional moonquake viewer with timeline scrubbing and visual insights. ',
 		github: 'https://github.com/spacemoonkeys/moonqwake',
 		website: 'https://moonqwake.pages.dev/',
-		image: 'moonqwake.jpg',
+		image: 'moonqwake.png',
 	},
 	{
-		name: 'Time Tracker',
+		name: 'A Slice of Pi',
 		description:
-			'A web application that handles time submissions for team projects',
-		github: 'https://github.com/vasiltop/time-tracker',
-		website: 'https://timetracker.vasiltopalovic.com/',
-		image: 'time-tracker.jpg',
+			'A Slice of Pi is a web application created for the OutStem Coding Challenge, where users can view metrics about a fictional pizza store.',
+		github: 'https://github.com/vasiltop/metrics',
+		website: 'https://a-slice-of-pi.vasiltopalovic.com/',
+		image: 'metrics.png',
 	},
 	{
-		name: 'Raycasting Engine',
+		name: 'Raywolf',
 		description:
-			'An implementation of a raycasting engine that displays any array of cells into a 3d environment using the SDL2 framework to draw pixels on the screen.',
+			'An implementation of a raycasting engine that displays any array of cells into a 3d environment using the SDL2 library to draw pixels on the screen.',
 		github: 'https://github.com/vasiltop/raycasting-engine',
-		image: 'raycasting.jpg',
+		image: 'raywolf.png',
 	},
 ];
 
@@ -97,7 +98,7 @@ const ready = ref(false);
 			<p
 				class="border-gradient lg:leading-8 md:leading-6 leading-5 min-w-[10em] text-xl"
 			>
-				I am a second year student at the University of Ottawa that has always
+				I am a third year student at the University of Ottawa that has always
 				been interested in technology. I started programming in the 9th grade
 				with game development and moved onto Java and Python where I developed a
 				deep passion for coding. After continuing to learn for many years I
@@ -174,9 +175,9 @@ const ready = ref(false);
 			</p>
 		</div>
 
-		<div v-else class="grid grid-cols-2 place-items-center h-4/6">
+		<div v-else class="grid grid-cols-2 place-items-center h-4/6 w-full p-16">
 			<div
-				class="w-4/6 h-full flex flex-col rounded-lg overflow-hidden background-card"
+				class="w-full h-full flex flex-col rounded-lg overflow-hidden background-card"
 				:style="'background-image: url(' + project.image + ')'"
 			>
 				<p class="text-[#3c3939] mt-auto bg-[#bbb6b2] bg-opacity-95 p-4">
